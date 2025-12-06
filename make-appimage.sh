@@ -19,6 +19,7 @@ cp -rn /opt/cursor-agent/*.ttf ./AppDir/bin
 cp -rn /opt/cursor-agent/*.png ./AppDir/bin
 
 # This app uses binaries as libraries lol
+rm -f ./AppDir/bin/merkle-tree-napi.* ./AppDir/bin/node_sqlite3.node
 cp -v ./AppDir/shared/bin/merkle-tree-napi.* ./AppDir/bin
 cp -v ./AppDir/shared/bin/node_sqlite3.node  ./AppDir/bin
 
