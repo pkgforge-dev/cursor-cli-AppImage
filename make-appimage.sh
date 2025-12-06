@@ -23,5 +23,11 @@ rm -f ./AppDir/bin/merkle-tree-napi.* ./AppDir/bin/node_sqlite3.node
 cp -v ./AppDir/shared/bin/merkle-tree-napi.* ./AppDir/bin
 cp -v ./AppDir/shared/bin/node_sqlite3.node  ./AppDir/bin
 
+# make bash script posix, doesn't need many changes
+sed -i \
+	-e 's|#!/usr/bin/env bash|#!/bin/sh|' \
+	-e 's|set -euo pipefail|set -eu|'     \
+	./AppDir/bin/cursor-agent
+
 # Turn AppDir into AppImage
 quick-sharun --make-appimage
