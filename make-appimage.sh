@@ -10,6 +10,7 @@ export ADD_HOOKS="self-updater.bg.hook"
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
 export ICON=DUMMY
 export DESKTOP=DUMMY
+export MAIN_BIN=cursor-agent
 
 # Deploy dependencies
 quick-sharun /opt/cursor-agent/* /usr/bin/rg /usr/bin/node
