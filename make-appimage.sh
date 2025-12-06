@@ -18,7 +18,9 @@ cp -rn /opt/cursor-agent/*.js  ./AppDir/bin
 cp -rn /opt/cursor-agent/*.ttf ./AppDir/bin
 cp -rn /opt/cursor-agent/*.png ./AppDir/bin
 
-# Additional changes can be done in between here
+# This app uses binaries as libraries lol
+cp -v ./AppDir/shared/bin/merkle-tree-napi.linux-x64-gnu.node ./AppDir/bin
+cp -v ./AppDir/shared/bin/node_sqlite3.node                   ./AppDir/bin
 
 # Turn AppDir into AppImage
 quick-sharun --make-appimage
