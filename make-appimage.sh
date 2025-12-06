@@ -13,6 +13,9 @@ export DESKTOP=DUMMY
 
 # Deploy dependencies
 quick-sharun /opt/cursor-agent/* /usr/bin/rg /usr/bin/node
+cp -rn /opt/cursor-agent/*.js  ./AppDir/bin
+cp -rn /opt/cursor-agent/*.ttf ./AppDir/bin
+cp -rn /opt/cursor-agent/*.png ./AppDir/bin
 
 # Additional changes can be done in between here
 
