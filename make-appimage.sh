@@ -13,7 +13,7 @@ export DESKTOP=DUMMY
 export MAIN_BIN=cursor-agent
 
 # Deploy dependencies
-quick-sharun ./AppDir/bin/*
+quick-sharun $(find ./AppDir/bin -type f ! -name '*.node' -executable)
 
 # make bash script posix, doesn't need many changes
 sed -i \
