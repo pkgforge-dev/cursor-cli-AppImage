@@ -13,15 +13,7 @@ export DESKTOP=DUMMY
 export MAIN_BIN=cursor-agent
 
 # Deploy dependencies
-quick-sharun /opt/cursor-agent/* /usr/bin/rg /usr/bin/node
-cp -rn /opt/cursor-agent/*.js  ./AppDir/bin
-cp -rn /opt/cursor-agent/*.ttf ./AppDir/bin
-cp -rn /opt/cursor-agent/*.png ./AppDir/bin
-
-# This app uses binaries as libraries lol
-rm -f ./AppDir/bin/merkle-tree-napi.* ./AppDir/bin/node_sqlite3.node
-cp -v ./AppDir/shared/bin/merkle-tree-napi.* ./AppDir/bin
-cp -v ./AppDir/shared/bin/node_sqlite3.node  ./AppDir/bin
+quick-sharun ./AppDir/bin/*
 
 # make bash script posix, doesn't need many changes
 sed -i \
