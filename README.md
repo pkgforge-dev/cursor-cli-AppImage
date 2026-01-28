@@ -1,7 +1,7 @@
 # cursor-cli-AppImage 🐧
 
 [![GitHub Downloads](https://img.shields.io/github/downloads/pkgforge-dev/cursor-cli-AppImage/total?logo=github&label=GitHub%20Downloads)](https://github.com/pkgforge-dev/cursor-cli-AppImage/releases/latest)
-[![CI Build Status](https://github.com//pkgforge-dev/cursor-cli-AppImage/actions/workflows/blank.yml/badge.svg)](https://github.com/pkgforge-dev/cursor-cli-AppImage/releases/latest)
+[![CI Build Status](https://github.com//pkgforge-dev/cursor-cli-AppImage/actions/workflows/appimage.yml/badge.svg)](https://github.com/pkgforge-dev/cursor-cli-AppImage/releases/latest)
 
 AppImage of cursor-cli **independent of the host libc** which makes it able to work on very very old distros as well as musl-libc distros like alpine linux. 
 
