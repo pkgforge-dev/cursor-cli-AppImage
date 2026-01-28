@@ -16,6 +16,6 @@ get-debloated-pkgs --add-common --prefer-nano
 make-aur-package cursor-cli
 
 mkdir -p ./AppDir/bin
-cp -r /opt/cursor-argent/* ./AppDir/bin
+cp -r /opt/cursor-agent/* ./AppDir/bin
 
 # If the application needs to be manually built that has to be done down here
