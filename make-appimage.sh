@@ -15,5 +15,9 @@ export MAIN_BIN=cursor-agent
 # Deploy dependencies
 quick-sharun $(find ./AppDir/bin ! -name '*.node' -executable) /usr/bin/bash
 
+# This is hardcoded to look into /usr/bin/ldd and causes a crash on musl systems
+# looks like we only need to patch this path away, it seems to work without it
+sed -i -e 's|/usr/bin/ldd|/XXX/YYY/ZZZ|g' ./AppDir/bin/*
+
 # Turn AppDir into AppImage
 quick-sharun --make-appimage
