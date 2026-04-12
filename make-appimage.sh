@@ -13,13 +13,7 @@ export DESKTOP=DUMMY
 export MAIN_BIN=cursor-agent
 
 # Deploy dependencies
-quick-sharun $(find ./AppDir/bin ! -name '*.node' -executable)
-
-# make bash script posix, doesn't need many changes
-sed -i \
-	-e 's|#!/usr/bin/env bash|#!/bin/sh|' \
-	-e 's|set -euo pipefail|set -eu|'     \
-	./AppDir/bin/cursor-agent
+quick-sharun $(find ./AppDir/bin ! -name '*.node' -executable) /usr/bin/bash
 
 # Turn AppDir into AppImage
 quick-sharun --make-appimage
